@@ -1,12 +1,12 @@
-import Header from './components/Header';
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <>
-      <Header />
-		  <h1 className="text-center text-3xl underline mt-4">Hello</h1>
-    </>
-    
+	return (
+		<div className="flex flex-col h-screen">
+			<Content />
+			<Footer />
+		</div>
 	);
 }
 
