@@ -1,6 +1,6 @@
 const IngredientsData = [
 	{
-		id: "1",
+		id: "0",
 		name: "Beetle Scuttle",
 		effect1: "Breach",
 		effect2: "Increase Armor",
@@ -9,7 +9,7 @@ const IngredientsData = [
 		src: "/images/Beetle_Scuttle.png",
 	},
 	{
-		id: "2",
+		id: "1",
 		name: "Blessed Thistle",
 		effect1: "Restore Stamina",
 		effect2: "Increase Weapon Power",
@@ -18,7 +18,7 @@ const IngredientsData = [
 		src: "/images/Blessed_Thistle.png",
 	},
 	{
-		id: "3",
+		id: "2",
 		name: "Blue Entoloma",
 		effect1: "Ravage Magicka",
 		effect2: "Cowardice",
@@ -27,7 +27,7 @@ const IngredientsData = [
 		src: "/images/Blue_Entoloma.png",
 	},
 	{
-		id: "4",
+		id: "3",
 		name: "Bugloss",
 		effect1: "Increase Spell Resist",
 		effect2: "Restore Health",
@@ -36,7 +36,7 @@ const IngredientsData = [
 		src: "/images/Bugloss.png",
 	},
 	{
-		id: "5",
+		id: "4",
 		name: "Butterfly Wing",
 		effect1: "Restore Health",
 		effect2: "Lingering Health",
@@ -45,7 +45,7 @@ const IngredientsData = [
 		src: "/images/Butterfly_Wing.png",
 	},
 	{
-		id: "6",
+		id: "5",
 		name: "Chaurus Egg",
 		effect1: "Timidity",
 		effect2: "Ravage Magicka",
@@ -54,7 +54,7 @@ const IngredientsData = [
 		src: "/images/Chaurus_Egg.png",
 	},
 	{
-		id: "7",
+		id: "6",
 		name: "Clam Gall",
 		effect1: "Increase Spell Resist",
 		effect2: "Hindrance",
@@ -63,7 +63,7 @@ const IngredientsData = [
 		src: "/images/Clam_Gall.png",
 	},
 	{
-		id: "8",
+		id: "7",
 		name: "Columbine",
 		effect1: "Restore Health",
 		effect2: "Restore Magicka",
@@ -72,7 +72,7 @@ const IngredientsData = [
 		src: "/images/Columbine.png",
 	},
 	{
-		id: "9",
+		id: "8",
 		name: "Corn Flower",
 		effect1: "Restore Magicka",
 		effect2: "Increase Spell Power",
@@ -81,7 +81,7 @@ const IngredientsData = [
 		src: "/images/Corn_Flower.png",
 	},
 	{
-		id: "10",
+		id: "9",
 		name: "Crimson Nirnroot",
 		effect1: "Timidity",
 		effect2: "Spell Critical",
@@ -90,7 +90,7 @@ const IngredientsData = [
 		src: "/images/Crimson_Nirnroot.png",
 	},
 	{
-		id: "11",
+		id: "10",
 		name: "Dragon's Bile",
 		effect1: "Heroism",
 		effect2: "Vulnerability",
@@ -99,7 +99,7 @@ const IngredientsData = [
 		src: "/images/Dragons_Bile.png",
 	},
 	{
-		id: "12",
+		id: "11",
 		name: "Dragon's Blood",
 		effect1: "Lingering Health",
 		effect2: "Restore Stamina",
@@ -108,7 +108,7 @@ const IngredientsData = [
 		src: "/images/Dragons_Blood.png",
 	},
 	{
-		id: "13",
+		id: "12",
 		name: "Dragon Rheum",
 		effect1: "Restore Magicka",
 		effect2: "Heroism",
@@ -117,7 +117,7 @@ const IngredientsData = [
 		src: "/images/Dragon_Rheum.png",
 	},
 	{
-		id: "14",
+		id: "13",
 		name: "Dragonthorn",
 		effect1: "Increase Weapon Power",
 		effect2: "Restore Stamina",
@@ -126,7 +126,7 @@ const IngredientsData = [
 		src: "/images/Dragonthorn.png",
 	},
 	{
-		id: "15",
+		id: "14",
 		name: "Emetic Russula",
 		effect1: "Ravage Health",
 		effect2: "Ravage Magicka",
@@ -135,7 +135,7 @@ const IngredientsData = [
 		src: "/images/Emetic_Russula.png",
 	},
 	{
-		id: "16",
+		id: "15",
 		name: "Fleshfly Larva",
 		effect1: "Ravage Stamina",
 		effect2: "Vulnerability",
@@ -144,7 +144,7 @@ const IngredientsData = [
 		src: "/images/Fleshfly_Larva.png",
 	},
 	{
-		id: "17",
+		id: "16",
 		name: "Imp Stool",
 		effect1: "Maim",
 		effect2: "Ravage Stamina",
@@ -153,7 +153,7 @@ const IngredientsData = [
 		src: "/images/Imp_Stool.png",
 	},
 	{
-		id: "18",
+		id: "17",
 		name: "Lady's Smock",
 		effect1: "Increase Spell Power",
 		effect2: "Restore Magicka",
@@ -162,7 +162,7 @@ const IngredientsData = [
 		src: "/images/Ladys_Smock.png",
 	},
 	{
-		id: "19",
+		id: "18",
 		name: "Luminous Russula",
 		effect1: "Ravage Stamina",
 		effect2: "Maim",
@@ -171,7 +171,7 @@ const IngredientsData = [
 		src: "/images/Luminous_Russula.png",
 	},
 	{
-		id: "20",
+		id: "19",
 		name: "Mountain Flower",
 		effect1: "Increase Armor",
 		effect2: "Restore Health",
@@ -180,7 +180,7 @@ const IngredientsData = [
 		src: "/images/Mountain_Flower.png",
 	},
 	{
-		id: "21",
+		id: "20",
 		name: "Mudcrab Chitin",
 		effect1: "Increase Spell Resist",
 		effect2: "Increase Armor",
@@ -189,7 +189,7 @@ const IngredientsData = [
 		src: "/images/Mudcrab_Chitin.png",
 	},
 	{
-		id: "22",
+		id: "21",
 		name: "Namira's Rot",
 		effect1: "Spell Critical",
 		effect2: "Speed",
@@ -198,7 +198,7 @@ const IngredientsData = [
 		src: "/images/Namiras_Rot.png",
 	},
 	{
-		id: "23",
+		id: "22",
 		name: "Nightshade",
 		effect1: "Ravage Health",
 		effect2: "Protection",
@@ -207,7 +207,7 @@ const IngredientsData = [
 		src: "/images/Nightshade.png",
 	},
 	{
-		id: "24",
+		id: "23",
 		name: "Nirnroot",
 		effect1: "Ravage Health",
 		effect2: "Uncertainty",
@@ -216,7 +216,7 @@ const IngredientsData = [
 		src: "/images/Nirnroot.png",
 	},
 	{
-		id: "25",
+		id: "24",
 		name: "Powdered Mother of Pearl",
 		effect1: "Lingering Health",
 		effect2: "Speed",
@@ -225,7 +225,7 @@ const IngredientsData = [
 		src: "/images/Powdered_Mother_of_Pearl.png",
 	},
 	{
-		id: "26",
+		id: "25",
 		name: "Scrib Jelly",
 		effect1: "Ravage Magicka",
 		effect2: "Speed",
@@ -234,7 +234,7 @@ const IngredientsData = [
 		src: "/images/Scrib_Jelly.png",
 	},
 	{
-		id: "27",
+		id: "26",
 		name: "Spider Egg",
 		effect1: "Hindrance",
 		effect2: "Invisible",
@@ -243,7 +243,7 @@ const IngredientsData = [
 		src: "/images/Spider_egg.png",
 	},
 	{
-		id: "28",
+		id: "27",
 		name: "Stinkhorn",
 		effect1: "Fracture",
 		effect2: "Ravage Health",
@@ -252,7 +252,7 @@ const IngredientsData = [
 		src: "/images/Stinkhorn.png",
 	},
 	{
-		id: "29",
+		id: "28",
 		name: "Torchbug Thorax",
 		effect1: "Fracture",
 		effect2: "Enervation",
@@ -261,7 +261,7 @@ const IngredientsData = [
 		src: "/images/Torchbug_Thorax.png",
 	},
 	{
-		id: "30",
+		id: "29",
 		name: "Vile Coagulant",
 		effect1: "Timidity",
 		effect2: "Ravage Health",
@@ -270,7 +270,7 @@ const IngredientsData = [
 		src: "/images/Vile_Coagulant.png",
 	},
 	{
-		id: "31",
+		id: "30",
 		name: "Violet Coprinus",
 		effect1: "Breach",
 		effect2: "Ravage Health",
@@ -279,7 +279,7 @@ const IngredientsData = [
 		src: "/images/Violet_Coprinus.png",
 	},
 	{
-		id: "32",
+		id: "31",
 		name: "Water Hyacinth",
 		effect1: "Restore Health",
 		effect2: "Spell Critical",
@@ -288,7 +288,7 @@ const IngredientsData = [
 		src: "/images/Water_Hyacinth.png",
 	},
 	{
-		id: "33",
+		id: "32",
 		name: "White Cap",
 		effect1: "Cowardice",
 		effect2: "Ravage Magicka",
@@ -297,7 +297,7 @@ const IngredientsData = [
 		src: "/images/White_Cap.png",
 	},
 	{
-		id: "34",
+		id: "33",
 		name: "Wormwood",
 		effect1: "Weapon Critical",
 		effect2: "Hindrance",
