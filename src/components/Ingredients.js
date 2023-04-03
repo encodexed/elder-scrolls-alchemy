@@ -25,7 +25,7 @@ export default function Ingredients(props) {
 				</button>
 			</div>
 
-			<div className='mt-4'>
+			<div className='mt-4 overflow-scroll border h-96'>
 				{IngredientsData.map((ingredient) => {
 					let isSelected = false;
 					if (selectedIngredients.includes(ingredient.id)) {

@@ -34,7 +34,7 @@ export default function SelectedIngredients(props) {
 	return (
 		<div className='flex w-full max-w-md mx-auto mt-6 space-x-3'>
 			<div className='flex flex-col items-center flex-1'>
-				<div className='w-32 h-32 border border-green-300'>
+				<div className='w-32 h-32 border'>
 					<div className='absolute'>
 						{ingredient1.id >= 0 && (
 							<RemoveButton onClick={deselectHandler1} />
@@ -63,7 +63,7 @@ export default function SelectedIngredients(props) {
 			</div>
 
 			<div className='flex flex-col items-center flex-1'>
-				<div className='w-32 h-32 border border-green-300'>
+				<div className='w-32 h-32 border'>
 					<div className='absolute'>
 						{ingredient2.id >= 0 && (
 							<RemoveButton onClick={deselectHandler2} />
@@ -92,7 +92,7 @@ export default function SelectedIngredients(props) {
 			</div>
 
 			<div className='flex flex-col items-center flex-1'>
-				<div className='w-32 h-32 border border-green-300'>
+				<div className='w-32 h-32 border'>
 					<div className='absolute'>
 						{ingredient3.id >= 0 && (
 							<RemoveButton onClick={deselectHandler3} />

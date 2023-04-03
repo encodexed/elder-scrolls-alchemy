@@ -672,6 +672,10 @@ video {
   height: auto;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -750,6 +754,10 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-scroll {
+  overflow: scroll;
 }
 
 .rounded-lg {
