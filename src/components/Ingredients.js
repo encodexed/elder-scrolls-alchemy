@@ -58,34 +58,16 @@ export default function Ingredients(props) {
 			setDisableAddButtons(false);
 		}
 
-		// If there are still ingredients selected...
 		if (
 			selectedIngredients.length === 3 ||
 			selectedIngredients.length === 2
 		) {
-			// update the effects array
 			const start = ingredientIndex * 4;
 			const updatedEffects = [...effects];
 			updatedEffects.splice(start, 4); // This method RETURNS the removed effects, can be problematic.
 			setEffects(updatedEffects);
-			// update the incompatibility array
-			// let updateIncompability = [];
-			// IngredientsData.forEach((ingredient) => {
-			// 	if (
-			// 		!updatedEffects.includes(ingredient.effect1) &&
-			// 		!updatedEffects.includes(ingredient.effect2) &&
-			// 		!updatedEffects.includes(ingredient.effect3) &&
-			// 		!updatedEffects.includes(ingredient.effect4)
-			// 	) {
-			// 		updateIncompability.push(ingredient.id);
-			// 	}
-			// });
 			setIncompatibleIngredients(getIncompability(updatedEffects));
 		}
-
-		// Update the incompatibility array now
-
-
 		// Upon removing the final remaining ingredient, reset incompabitibility.
 		if (selectedIngredients.length === 1) {
 			setIncompatibleIngredients([]);
@@ -132,6 +114,7 @@ export default function Ingredients(props) {
 							selectIngredient={selectIngredient}
 							deselectIngredient={deselectIngredient}
 							id={ingredient.id}
+							effects={effects}
 							isSelected={isSelected}
 							isDisabled={disableAddButtons}
 						/>
