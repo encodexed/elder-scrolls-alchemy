@@ -18,7 +18,6 @@ export default function Content() {
 	return (
 		<div className="mx-auto grow">
 			<Card>
-				<h1 className='mt-4 text-4xl text-center'>Alchemy Assistant</h1>
             <Tabs viewingByPotions={viewingByPotions} ingredientsClickHandler={ingredientsClickHandler} potionsClickHandler={potionsClickHandler} />
             <Selections viewingByPotions={viewingByPotions} />
 			</Card>

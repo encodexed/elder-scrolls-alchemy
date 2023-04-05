@@ -47,7 +47,7 @@ export default function SelectedIngredients(props) {
 	};
 
 	return (
-		<div className='flex w-full max-w-md mx-auto mt-6 space-x-3'>
+		<div className='flex w-full py-2 space-x-3 border border-t-0'>
 			<SelectedIngredient
 				key={'a' + ingredient1.id}
 				ingredient={ingredient1}

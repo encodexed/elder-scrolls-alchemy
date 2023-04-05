@@ -2,6 +2,22 @@ import Ingredient from "./Ingredient";
 import IngredientsData from "../IngredientsData";
 import SelectedIngredients from "./SelectedIngredients";
 import { useState } from "react";
+import SectionHeader from "./UI/SectionHeader";
+
+function getIncompability(effects) {
+	let incompatible = [];
+	IngredientsData.forEach((ingredient) => {
+		if (
+			!effects.includes(ingredient.effect1) &&
+			!effects.includes(ingredient.effect2) &&
+			!effects.includes(ingredient.effect3) &&
+			!effects.includes(ingredient.effect4)
+		) {
+			incompatible.push(ingredient.id);
+		}
+	});
+	return incompatible;
+}
 
 export default function Ingredients(props) {
 	const [selectedIngredients, setSelectedIngredients] = useState([]);
@@ -20,23 +36,9 @@ export default function Ingredients(props) {
 		// And if there's room, the ingredient and it's effects are updated in state
 		if (selectedIngredients.length < 3) {
 			setSelectedIngredients([...selectedIngredients, id]);
-			setEffects([...effects, ...newEffects]);
-
-			// An array is created to act upon state changes before they're scheduled
-			let allEffects = [...effects, ...newEffects];
-			let updateIncompability = [];
-			// And unselected ingredients are checked to see if they are incompatible with the selected ingredients
-			IngredientsData.forEach((ingredient) => {
-				if (
-					!allEffects.includes(ingredient.effect1) &&
-					!allEffects.includes(ingredient.effect2) &&
-					!allEffects.includes(ingredient.effect3) &&
-					!allEffects.includes(ingredient.effect4)
-				) {
-					updateIncompability.push(ingredient.id);
-				}
-			});
-			setIncompatibleIngredients(updateIncompability);
+			const allEffects = [...effects, ...newEffects];
+			setEffects(allEffects);
+			setIncompatibleIngredients(getIncompability(allEffects));
 		}
 
 		// Upon adding final ingredient choice...
@@ -67,18 +69,18 @@ export default function Ingredients(props) {
 			updatedEffects.splice(start, 4); // This method RETURNS the removed effects, can be problematic.
 			setEffects(updatedEffects);
 			// update the incompatibility array
-			let updateIncompability = [];
-			IngredientsData.forEach((ingredient) => {
-				if (
-					!updatedEffects.includes(ingredient.effect1) &&
-					!updatedEffects.includes(ingredient.effect2) &&
-					!updatedEffects.includes(ingredient.effect3) &&
-					!updatedEffects.includes(ingredient.effect4)
-				) {
-					updateIncompability.push(ingredient.id);
-				}
-			});
-			setIncompatibleIngredients(updateIncompability);
+			// let updateIncompability = [];
+			// IngredientsData.forEach((ingredient) => {
+			// 	if (
+			// 		!updatedEffects.includes(ingredient.effect1) &&
+			// 		!updatedEffects.includes(ingredient.effect2) &&
+			// 		!updatedEffects.includes(ingredient.effect3) &&
+			// 		!updatedEffects.includes(ingredient.effect4)
+			// 	) {
+			// 		updateIncompability.push(ingredient.id);
+			// 	}
+			// });
+			setIncompatibleIngredients(getIncompability(updatedEffects));
 		}
 
 		// Update the incompatibility array now
@@ -99,18 +101,25 @@ export default function Ingredients(props) {
 	});
 
 	return (
-		<>
+		<div className='mt-6'>
+			<SectionHeader title={'Selections'} />
 			<SelectedIngredients
 				selectedIngredients={selectedIngredients}
 				deselectIngredient={deselectIngredient}
 			/>
-			<div className='mt-2 text-center'>
+			{/* <div className='mt-2 text-center'>
 				<button className='px-4 py-2 mt-4 text-lg text-white bg-blue-500 rounded-lg hover:bg-blue-400'>
 					Calculate
 				</button>
+			</div> */}
+
+			<SectionHeader title={'Expected Result'} />
+			<div className='text-center border'>
+				<p>Not enough reagents</p>
 			</div>
 
-			<div className='mt-4 overflow-scroll border h-96'>
+			<SectionHeader title={'Add Ingredients'} />
+			<div className='overflow-scroll border h-80'>
 				{displayIngredients.map((ingredient) => {
 					let isSelected = false;
 					if (selectedIngredients.includes(ingredient.id)) {
@@ -129,6 +138,6 @@ export default function Ingredients(props) {
 					);
 				})}
 			</div>
-		</>
+		</div>
 	);
 }
