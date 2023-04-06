@@ -1,5 +1,6 @@
 import IngredientsData from "../IngredientsData";
 import SelectedIngredient from "./SelectedIngredient";
+import { useState, useEffect } from "react";
 
 function EmptySlot(id) {
 	this.id = id;
@@ -12,9 +13,24 @@ function EmptySlot(id) {
 }
 
 export default function SelectedIngredients(props) {
-	const ingredient1 = IngredientsData[props.selectedIngredients[0]] || new EmptySlot("empty1");
-	const ingredient2 = IngredientsData[props.selectedIngredients[1]] || new EmptySlot("empty2");
-	const ingredient3 = IngredientsData[props.selectedIngredients[2]] || new EmptySlot("empty3");
+	const [matchedIngredients, setMatchedIngredients] = useState([]);
+
+	const ingredient1 =
+		IngredientsData[props.selectedIngredients[0]] || new EmptySlot("empty1");
+	const ingredient2 =
+		IngredientsData[props.selectedIngredients[1]] || new EmptySlot("empty2");
+	const ingredient3 =
+		IngredientsData[props.selectedIngredients[2]] || new EmptySlot("empty3");
+
+	useEffect(() => {
+		if (props.effects.length >= 8) {
+			const effects = [...props.effects];
+			const returnMatches = effects.filter((item, index) => index !== effects.indexOf(item));
+			setMatchedIngredients([...returnMatches]);
+		} else {
+			setMatchedIngredients([]);
+		}
+	}, [props.effects]);
 
 	const deselectHandler1 = () => {
 		props.deselectIngredient(ingredient1.id);
@@ -32,16 +48,19 @@ export default function SelectedIngredients(props) {
 		<div className='flex w-full py-2 space-x-3 border border-t-0'>
 			<SelectedIngredient
 				key={"a" + ingredient1.id}
+				matches={matchedIngredients}
 				ingredient={ingredient1}
 				deselectHandler={deselectHandler1}
 			/>
 			<SelectedIngredient
 				key={"a" + ingredient2.id}
+				matches={matchedIngredients}
 				ingredient={ingredient2}
 				deselectHandler={deselectHandler2}
 			/>
 			<SelectedIngredient
 				key={"a" + ingredient3.id}
+				matches={matchedIngredients}
 				ingredient={ingredient3}
 				deselectHandler={deselectHandler3}
 			/>

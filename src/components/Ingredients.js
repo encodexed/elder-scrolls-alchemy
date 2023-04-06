@@ -3,6 +3,7 @@ import IngredientsData from "../IngredientsData";
 import SelectedIngredients from "./SelectedIngredients";
 import { useState } from "react";
 import SectionHeader from "./UI/SectionHeader";
+import Results from "./Results";
 
 function getIncompability(effects) {
 	let incompatible = [];
@@ -90,16 +91,9 @@ export default function Ingredients(props) {
 				deselectIngredient={deselectIngredient}
 				effects={effects}
 			/>
-			{/* <div className='mt-2 text-center'>
-				<button className='px-4 py-2 mt-4 text-lg text-white bg-blue-500 rounded-lg hover:bg-blue-400'>
-					Calculate
-				</button>
-			</div> */}
 
 			<SectionHeader title={'Expected Result'} />
-			<div className='text-center border'>
-				<p>Not enough reagents</p>
-			</div>
+			<Results/>
 
 			<SectionHeader title={'Add Ingredients'} />
 			<div className='overflow-scroll border h-80'>
