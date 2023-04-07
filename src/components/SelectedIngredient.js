@@ -32,8 +32,8 @@ export default function SelectedIngredient(props) {
 
 	return (
 		<div className='flex flex-col items-center flex-1'>
-			<div className='w-32 h-32'>
-				<div className='absolute'>
+			<div className='w-20 h-20'>
+				<div className='absolute -translate-x-6'>
 					{id >= 0 && <RemoveButton onClick={props.deselectHandler} />}
 				</div>
 				<img className='w-full' src={src} alt={name} />
