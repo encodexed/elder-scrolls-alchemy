@@ -3,7 +3,6 @@ import IngredientsData from "../IngredientsData";
 import SelectedIngredients from "./SelectedIngredients";
 import { useState } from "react";
 import SectionHeader from "./UI/SectionHeader";
-import Results from "./Results";
 
 function getIncompability(effects) {
 	let incompatible = [];
@@ -91,9 +90,6 @@ export default function Ingredients(props) {
 				deselectIngredient={deselectIngredient}
 				effects={effects}
 			/>
-
-			<SectionHeader title={'Expected Result'} />
-			<Results/>
 
 			<SectionHeader title={'Add Ingredients'} />
 			<div className='overflow-scroll border h-80'>

@@ -40,20 +40,20 @@ export default function SelectedIngredient(props) {
 			</div>
 			<div className='text-center'>
 				<h4 className='underline text-md'>{name}</h4>
-				<p class='text-sm leading-none'>
-					<span class={style1} style={shadow1}>
+				<p className='text-sm leading-none'>
+					<span className={style1} style={shadow1}>
 						{effect1}
 					</span>
 					<br />
-					<span class={style2} style={shadow2}>
+					<span className={style2} style={shadow2}>
 						{effect2}
 					</span>
 					<br />
-					<span class={style3} style={shadow3}>
+					<span className={style3} style={shadow3}>
 						{effect3}
 					</span>
 					<br />
-					<span class={style4} style={shadow4}>
+					<span className={style4} style={shadow4}>
 						{effect4}
 					</span>
 				</p>
