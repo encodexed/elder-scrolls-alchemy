@@ -131,7 +131,7 @@ const IngredientsData = [
 		effect1: "Ravage Health",
 		effect2: "Ravage Magicka",
 		effect3: "Ravage Stamina",
-		effect4: " Entrapment",
+		effect4: "Entrapment",
 		src: "/images/ingredients/Emetic_Russula.png",
 	},
 	{
