@@ -10,7 +10,7 @@ function EmptySlot(id) {
 	this.effect2 = "-";
 	this.effect3 = "-";
 	this.effect4 = "-";
-	this.src = "/images/Empty.png";
+	this.src = "/images/ingredients/Empty.png";
 }
 
 export default function SelectedIngredients(props) {

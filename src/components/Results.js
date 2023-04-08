@@ -13,7 +13,7 @@ export default function Results(props) {
 					<div className='flex-1'>
 						<img
 							className='mx-auto'
-							src='/images/Potions/Increase_Armor.png'
+							src='/images/potions/Increase_Armor.png'
 							alt='A potion!'
 						/>
 						<p>Potion of Healing</p>

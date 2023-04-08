@@ -6,7 +6,7 @@ const IngredientsData = [
 		effect2: "Increase Armor",
 		effect3: "Protection",
 		effect4: "Vitality",
-		src: "/images/Beetle_Scuttle.png",
+		src: "/images/ingredients/Beetle_Scuttle.png",
 	},
 	{
 		id: "1",
@@ -15,7 +15,7 @@ const IngredientsData = [
 		effect2: "Increase Weapon Power",
 		effect3: "Ravage Health",
 		effect4: "Speed",
-		src: "/images/Blessed_Thistle.png",
+		src: "/images/ingredients/Blessed_Thistle.png",
 	},
 	{
 		id: "2",
@@ -24,7 +24,7 @@ const IngredientsData = [
 		effect2: "Cowardice",
 		effect3: "Restore Health",
 		effect4: "Invisible",
-		src: "/images/Blue_Entoloma.png",
+		src: "/images/ingredients/Blue_Entoloma.png",
 	},
 	{
 		id: "3",
@@ -33,7 +33,7 @@ const IngredientsData = [
 		effect2: "Restore Health",
 		effect3: "Cowardice",
 		effect4: "Restore Magicka",
-		src: "/images/Bugloss.png",
+		src: "/images/ingredients/Bugloss.png",
 	},
 	{
 		id: "4",
@@ -42,7 +42,7 @@ const IngredientsData = [
 		effect2: "Lingering Health",
 		effect3: "Uncertainty",
 		effect4: "Vitality",
-		src: "/images/Butterfly_Wing.png",
+		src: "/images/ingredients/Butterfly_Wing.png",
 	},
 	{
 		id: "5",
@@ -51,7 +51,7 @@ const IngredientsData = [
 		effect2: "Ravage Magicka",
 		effect3: "Restore Stamina",
 		effect4: "Detection",
-		src: "/images/Chaurus_Egg.png",
+		src: "/images/ingredients/Chaurus_Egg.png",
 	},
 	{
 		id: "6",
@@ -60,7 +60,7 @@ const IngredientsData = [
 		effect2: "Hindrance",
 		effect3: "Vulnerability",
 		effect4: "Defile",
-		src: "/images/Clam_Gall.png",
+		src: "/images/ingredients/Clam_Gall.png",
 	},
 	{
 		id: "7",
@@ -69,7 +69,7 @@ const IngredientsData = [
 		effect2: "Restore Magicka",
 		effect3: "Restore Stamina",
 		effect4: "Unstoppable",
-		src: "/images/Columbine.png",
+		src: "/images/ingredients/Columbine.png",
 	},
 	{
 		id: "8",
@@ -78,7 +78,7 @@ const IngredientsData = [
 		effect2: "Increase Spell Power",
 		effect3: "Ravage Health",
 		effect4: "Detection",
-		src: "/images/Corn_Flower.png",
+		src: "/images/ingredients/Corn_Flower.png",
 	},
 	{
 		id: "9",
@@ -87,7 +87,7 @@ const IngredientsData = [
 		effect2: "Spell Critical",
 		effect3: "Gradual Ravage Health",
 		effect4: "Restore Health",
-		src: "/images/Crimson_Nirnroot.png",
+		src: "/images/ingredients/Crimson_Nirnroot.png",
 	},
 	{
 		id: "10",
@@ -96,7 +96,7 @@ const IngredientsData = [
 		effect2: "Vulnerability",
 		effect3: "Invisible",
 		effect4: "Vitality",
-		src: "/images/Dragons_Bile.png",
+		src: "/images/ingredients/Dragons_Bile.png",
 	},
 	{
 		id: "11",
@@ -105,7 +105,7 @@ const IngredientsData = [
 		effect2: "Restore Stamina",
 		effect3: "Heroism",
 		effect4: "Defile",
-		src: "/images/Dragons_Blood.png",
+		src: "/images/ingredients/Dragons_Blood.png",
 	},
 	{
 		id: "12",
@@ -114,7 +114,7 @@ const IngredientsData = [
 		effect2: "Enervation",
 		effect3: "Heroism",
 		effect4: "Speed",
-		src: "/images/Dragon_Rheum.png",
+		src: "/images/ingredients/Dragon_Rheum.png",
 	},
 	{
 		id: "13",
@@ -123,7 +123,7 @@ const IngredientsData = [
 		effect2: "Restore Stamina",
 		effect3: "Fracture",
 		effect4: "Weapon Critical",
-		src: "/images/Dragonthorn.png",
+		src: "/images/ingredients/Dragonthorn.png",
 	},
 	{
 		id: "14",
@@ -132,7 +132,7 @@ const IngredientsData = [
 		effect2: "Ravage Magicka",
 		effect3: "Ravage Stamina",
 		effect4: " Entrapment",
-		src: "/images/Emetic_Russula.png",
+		src: "/images/ingredients/Emetic_Russula.png",
 	},
 	{
 		id: "15",
@@ -141,7 +141,7 @@ const IngredientsData = [
 		effect2: "Vulnerability",
 		effect3: "Gradual Ravage Health",
 		effect4: "Vitality",
-		src: "/images/Fleshfly_Larva.png",
+		src: "/images/ingredients/Fleshfly_Larva.png",
 	},
 	{
 		id: "16",
@@ -150,7 +150,7 @@ const IngredientsData = [
 		effect2: "Ravage Stamina",
 		effect3: "Increase Armor",
 		effect4: "Enervation",
-		src: "/images/Imp_Stool.png",
+		src: "/images/ingredients/Imp_Stool.png",
 	},
 	{
 		id: "17",
@@ -159,7 +159,7 @@ const IngredientsData = [
 		effect2: "Restore Magicka",
 		effect3: "Breach",
 		effect4: "Spell Critical",
-		src: "/images/Ladys_Smock.png",
+		src: "/images/ingredients/Ladys_Smock.png",
 	},
 	{
 		id: "18",
@@ -168,7 +168,7 @@ const IngredientsData = [
 		effect2: "Maim",
 		effect3: "Restore Health",
 		effect4: "Hindrance",
-		src: "/images/Luminous_Russula.png",
+		src: "/images/ingredients/Luminous_Russula.png",
 	},
 	{
 		id: "19",
@@ -177,7 +177,7 @@ const IngredientsData = [
 		effect2: "Restore Health",
 		effect3: "Maim",
 		effect4: "Restore Stamina",
-		src: "/images/Mountain_Flower.png",
+		src: "/images/ingredients/Mountain_Flower.png",
 	},
 	{
 		id: "20",
@@ -186,7 +186,7 @@ const IngredientsData = [
 		effect2: "Increase Armor",
 		effect3: "Protection",
 		effect4: "Defile",
-		src: "/images/Mudcrab_Chitin.png",
+		src: "/images/ingredients/Mudcrab_Chitin.png",
 	},
 	{
 		id: "21",
@@ -195,7 +195,7 @@ const IngredientsData = [
 		effect2: "Speed",
 		effect3: "Invisible",
 		effect4: "Unstoppable",
-		src: "/images/Namiras_Rot.png",
+		src: "/images/ingredients/Namiras_Rot.png",
 	},
 	{
 		id: "22",
@@ -204,7 +204,7 @@ const IngredientsData = [
 		effect2: "Protection",
 		effect3: "Gradual Ravage Health",
 		effect4: "Defile",
-		src: "/images/Nightshade.png",
+		src: "/images/ingredients/Nightshade.png",
 	},
 	{
 		id: "23",
@@ -213,7 +213,7 @@ const IngredientsData = [
 		effect2: "Uncertainty",
 		effect3: "Enervation",
 		effect4: "Invisible",
-		src: "/images/Nirnroot.png",
+		src: "/images/ingredients/Nirnroot.png",
 	},
 	{
 		id: "24",
@@ -222,7 +222,7 @@ const IngredientsData = [
 		effect2: "Speed",
 		effect3: "Vitality",
 		effect4: "Protection",
-		src: "/images/Powdered_Mother_of_Pearl.png",
+		src: "/images/ingredients/Powdered_Mother_of_Pearl.png",
 	},
 	{
 		id: "25",
@@ -231,7 +231,7 @@ const IngredientsData = [
 		effect2: "Speed",
 		effect3: "Vulnerability",
 		effect4: "Lingering Health",
-		src: "/images/Scrib_Jelly.png",
+		src: "/images/ingredients/Scrib_Jelly.png",
 	},
 	{
 		id: "26",
@@ -240,7 +240,7 @@ const IngredientsData = [
 		effect2: "Invisible",
 		effect3: "Lingering Health",
 		effect4: "Defile",
-		src: "/images/Spider_egg.png",
+		src: "/images/ingredients/Spider_egg.png",
 	},
 	{
 		id: "27",
@@ -249,7 +249,7 @@ const IngredientsData = [
 		effect2: "Ravage Health",
 		effect3: "Increase Weapon Power",
 		effect4: "Ravage Stamina",
-		src: "/images/Stinkhorn.png",
+		src: "/images/ingredients/Stinkhorn.png",
 	},
 	{
 		id: "28",
@@ -258,7 +258,7 @@ const IngredientsData = [
 		effect2: "Enervation",
 		effect3: "Detection",
 		effect4: "Vitality",
-		src: "/images/Torchbug_Thorax.png",
+		src: "/images/ingredients/Torchbug_Thorax.png",
 	},
 	{
 		id: "29",
@@ -267,7 +267,7 @@ const IngredientsData = [
 		effect2: "Ravage Health",
 		effect3: "Restore Magicka",
 		effect4: "Protection",
-		src: "/images/Vile_Coagulant.png",
+		src: "/images/ingredients/Vile_Coagulant.png",
 	},
 	{
 		id: "30",
@@ -276,7 +276,7 @@ const IngredientsData = [
 		effect2: "Ravage Health",
 		effect3: "Increase Spell Power",
 		effect4: "Ravage Magicka",
-		src: "/images/Violet_Coprinus.png",
+		src: "/images/ingredients/Violet_Coprinus.png",
 	},
 	{
 		id: "31",
@@ -285,7 +285,7 @@ const IngredientsData = [
 		effect2: "Spell Critical",
 		effect3: "Weapon Critical",
 		effect4: "Entrapment",
-		src: "/images/Water_Hyacinth.png",
+		src: "/images/ingredients/Water_Hyacinth.png",
 	},
 	{
 		id: "32",
@@ -294,7 +294,7 @@ const IngredientsData = [
 		effect2: "Ravage Magicka",
 		effect3: "Increase Spell Resist",
 		effect4: "Detection",
-		src: "/images/White_Cap.png",
+		src: "/images/ingredients/White_Cap.png",
 	},
 	{
 		id: "33",
@@ -303,7 +303,7 @@ const IngredientsData = [
 		effect2: "Hindrance",
 		effect3: "Detection",
 		effect4: "Unstoppable",
-		src: "/images/Wormwood.png",
+		src: "/images/ingredients/Wormwood.png",
 	}
 ];
 
