@@ -84,7 +84,6 @@ export default function Ingredients(props) {
 
 	return (
 		<div className='mt-6'>
-			<SectionHeader title={'Selections'} />
 			<SelectedIngredients
 				selectedIngredients={selectedIngredients}
 				deselectIngredient={deselectIngredient}

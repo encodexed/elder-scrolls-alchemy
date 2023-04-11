@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-
-import SectionHeader from "../UI/SectionHeader";
 import EffectsData from "../../EffectsData";
 import ResultingPotion from "./ResultingPotion";
 import ResultingPoison from "./ResultingPoison";
@@ -26,7 +24,7 @@ export default function Results(props) {
 	const displayNoMatch = () => {
 		return (
 			<div className='flex text-center border'>
-				<p className='flex-1'>The ingredients will not react</p>
+				<p className='flex-1 text-red-500'>The chosen ingredients will not react.</p>
 			</div>
 		);
 	};
@@ -39,7 +37,6 @@ export default function Results(props) {
 
 	return (
 		<>
-			<SectionHeader title={"Expected Result"} />
 			{matches && showPotions && (
 				<ResultingPotion
 					effectInfo={effectInfo}
