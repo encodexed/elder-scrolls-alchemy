@@ -1,6 +1,3 @@
-// negative effect <span class='text-purple-400'>
-// positive effect <span class='text-amber-400'>
-
 const EffectsData = [
 	{
 		id: "100",
@@ -95,9 +92,9 @@ const EffectsData = [
 		counterEffect: "Timidity",
 		summary: "Increases ultimate generation, inflicts healing absorption",
 		potionEffect:
-			"Grants you <span class='text-amber-400'>Minor Heroism</span> restoring 1 Ultimate every 1.5 seconds for 47.6 seconds. (45 second cooldown)",
+			"Grants you <span class='text-amber-500'>Minor Heroism</span> restoring 1 Ultimate every 1.5 seconds for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts 2000 <span class='text-purple-400'>Heal Absorption</span> to your target, negating healing they receive for 5.5 seconds, and grants you <span class='text-amber-400'>Minor Heroism</span>, granting you 1 Ultimate every 1.5 seconds for 7.2 seconds. (10s cooldown)",
+			"Inflicts 2000 <span class='text-purple-400'>Heal Absorption</span> to your target, negating healing they receive for 5.5 seconds, and grants you <span class='text-amber-500'>Minor Heroism</span>, granting you 1 Ultimate every 1.5 seconds for 7.2 seconds. (10s cooldown)",
 		src: "/images/effects/Heroism.png",
 	},
 	{
@@ -117,7 +114,7 @@ const EffectsData = [
 		counterEffect: "Fracture",
 		summary: "Alters physical resistance",
 		potionEffect:
-			"Increases your <span class='text-amber-400'>Physical Resistance</span> by 5280 for 47.6 seconds. (45 second cooldown)",
+			"Increases your <span class='text-amber-500'>Physical Resistance</span> by 5280 for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
 			"Reduces your target's Physical Resistance by 1320, and increases your Physical Resistance by 1320 for 5.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Increase_Armor.png",
@@ -128,9 +125,9 @@ const EffectsData = [
 		counterEffect: "Cowardice",
 		summary: "Alters spell power",
 		potionEffect:
-			"Grants <span class='text-amber-400'>Major Sorcery</span> which increases your Spell Damage by 20% for 47.6 seconds. (45 second cooldown)",
+			"Grants <span class='text-amber-500'>Major Sorcery</span> which increases your Spell Damage by 20% for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts <span class='text-purple-400'>Minor Cowardice</span> to your target and grants you <span class='text-amber-400'>Minor Sorcery</span>, reducing their Weapon and Spell Damage by 215 and increasing your Spell Power by 10% for 3.5 seconds.",
+			"Inflicts <span class='text-purple-400'>Minor Cowardice</span> to your target and grants you <span class='text-amber-500'>Minor Sorcery</span>, reducing their Weapon and Spell Damage by 215 and increasing your Spell Power by 10% for 3.5 seconds.",
 		src: "/images/effects/Increase_Spell_Power.png",
 	},
 	{
@@ -150,9 +147,9 @@ const EffectsData = [
 		counterEffect: "Maim",
 		summary: "Alters physical power",
 		potionEffect:
-			"Grants <span class='text-amber-400'>Major Brutality</span> which increases your Weapon Damage by 20% for 47.6 seconds. (45 second cooldown)",
+			"Grants <span class='text-amber-500'>Major Brutality</span> which increases your Weapon Damage by 20% for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts <span class='text-purple-400'>Minor Maim</span> to your target and grants you <span class='text-amber-400'>Minor Brutality</span>, reducing their Damage by 5% and increasing your Weapon Damage by 10% for 3.5 seconds. (10 second cooldown)",
+			"Inflicts <span class='text-purple-400'>Minor Maim</span> to your target and grants you <span class='text-amber-500'>Minor Brutality</span>, reducing their Damage by 5% and increasing your Weapon Damage by 10% for 3.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Increase_Weapon_Power.png",
 	},
 	{
@@ -194,9 +191,9 @@ const EffectsData = [
 		counterEffect: "Vulnerability",
 		summary: "Reduces damage taken",
 		potionEffect:
-			"Grants you <span class='text-amber-400'>Minor Protection</span>, reducing your damage taken by 5% for 15.7 seconds. (45 second cooldown)",
+			"Grants you <span class='text-amber-500'>Minor Protection</span>, reducing your damage taken by 5% for 15.7 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts <span class='text-purple-400'>Minor Vulnerability</span> to your target and grants you <span class='text-amber-400'>Minor Protection</span>, increasing damage your victim takes by 5% and reducing your damage taken by 5% for 2.5 seconds. (10 second cooldown)",
+			"Inflicts <span class='text-purple-400'>Minor Vulnerability</span> to your target and grants you <span class='text-amber-500'>Minor Protection</span>, increasing damage your victim takes by 5% and reducing your damage taken by 5% for 2.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Protection.png",
 	},
 	{
@@ -238,7 +235,7 @@ const EffectsData = [
 		counterEffect: "Ravage Health",
 		summary: "Restores/drains health immediately and over time, grants major fortitude",
 		potionEffect:
-			"Restore 8369 <span class='text-red-500'>Health</span> immediately.<br>Grants <span class='text-amber-400'>Major Fortitude</span> which increases your <span class='text-red-500'>Health Recovery</span> by 30% for 47.6 seconds. (45 second cooldown)",
+			"Restore 8369 <span class='text-red-500'>Health</span> immediately.<br>Grants <span class='text-amber-500'>Major Fortitude</span> which increases your <span class='text-red-500'>Health Recovery</span> by 30% for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
 			"Drains Health from your target, dealing 1342 <span class='text-emerald-700'>Poison</span> damage to your target and restoring 1266 <span class='text-red-500'>Health</span> to you per second for 2.4 seconds. (10 second cooldown)",
 		src: "/images/effects/Restore_Health.png",
@@ -249,7 +246,7 @@ const EffectsData = [
 		counterEffect: "Ravage Magicka",
 		summary: "Restores/drains magicka immediately and over time, grants major intellect",
 		potionEffect:
-			"Restore 7582 <span class='text-sky-500'>Magicka</span> immediately.<br>Grants <span class='text-amber-400'>Major Intellect</span> which increases your <span class='text-sky-500'>Magicka Recovery</span> by 30% for 47.6 seconds. (45 second cooldown)",
+			"Restore 7582 <span class='text-sky-500'>Magicka</span> immediately.<br>Grants <span class='text-amber-500'>Major Intellect</span> which increases your <span class='text-sky-500'>Magicka Recovery</span> by 30% for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
 			"Drains <span class='text-sky-500'>Magicka</span> from your target, increasing the cost of their <span class='text-sky-500'>Magicka</span> abilities by 10%, and restores 238 <span class='text-sky-500'>Magicka</span> to you per second for 3.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Restore_Magicka.png",
@@ -260,7 +257,7 @@ const EffectsData = [
 		counterEffect: "Ravage Stamina",
 		summary: "Restores/drains stamina immediately and over time, grants major endurance",
 		potionEffect:
-			"Restore 7582 <span class='text-green-500'>Stamina</span> immediately.<br>Grants <span class='text-amber-400'>Major Endurance</span> which increases your <span class='text-green-500'>Stamina Recovery</span> by 30% for 47.6 seconds. (45 second cooldown)",
+			"Restore 7582 <span class='text-green-500'>Stamina</span> immediately.<br>Grants <span class='text-amber-500'>Major Endurance</span> which increases your <span class='text-green-500'>Stamina Recovery</span> by 30% for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
 			"Drains <span class='text-green-500'>Stamina</span> from your target, increasing the cost of their <span class='text-green-500'>Stamina</span> abilities by 10%, and restores 238 <span class='text-green-500'>Stamina</span> to you per second for 5.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Restore_Stamina.png",
@@ -271,9 +268,9 @@ const EffectsData = [
 		counterEffect: "Hindrance",
 		summary: "Alters movement speed",
 		potionEffect:
-			"Grants <span class='text-amber-400'>Major Expedition</span> which increases your Movement Speed by 30% for 15.7 seconds. (45 second cooldown)",
+			"Grants <span class='text-amber-500'>Major Expedition</span> which increases your Movement Speed by 30% for 15.7 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts <span class='text-purple-400'>Hindrance</span> to your target and grants you <span class='text-amber-400'>Major Expedition</span>, reducing their Movement Speed by 40% and increasing your Movement Speed by 30% for 5.5 seconds. (10 second cooldown)",
+			"Inflicts <span class='text-purple-400'>Hindrance</span> to your target and grants you <span class='text-amber-500'>Major Expedition</span>, reducing their Movement Speed by 40% and increasing your Movement Speed by 30% for 5.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Speed.png",
 	},
 	{
@@ -282,9 +279,9 @@ const EffectsData = [
 		counterEffect: "Uncertainty",
 		summary: "Alters spell critical",
 		potionEffect:
-			"Grants <span class='text-amber-400'>Major Prophecy</span> which gives you 2629 Spell Critical Rating for 47.6 seconds. (45 second cooldown)",
+			"Grants <span class='text-amber-500'>Major Prophecy</span> which gives you 2629 Spell Critical Rating for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts <span class='text-purple-400'>Minor Uncertainty</span> to your target and grants you <span class='text-amber-400'>Minor Prophecy</span>, reducing their Weapon and Spell Critical by 1320 and increasing your Spell Critical by 1314 for 5.5 seconds. (10 second cooldown)",
+			"Inflicts <span class='text-purple-400'>Minor Uncertainty</span> to your target and grants you <span class='text-amber-500'>Minor Prophecy</span>, reducing their Weapon and Spell Critical by 1320 and increasing your Spell Critical by 1314 for 5.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Spell_Critical.png",
 	},
 	{
@@ -317,7 +314,7 @@ const EffectsData = [
 		potionEffect:
 			"Become immune to knockback and disabling effects for 10.4 seconds. (45 second cooldown)",
 		poisonEffect:
-			"<span class='text-purple-400'>Immobilizes</span> your target and grants you <span class='text-amber-400'>Unstoppable</span>, rendering you immune to control effects for 3.9 seconds. This poison will also break you free of ongoing control effects. (10 second cooldown)",
+			"<span class='text-purple-400'>Immobilizes</span> your target and grants you <span class='text-amber-500'>Unstoppable</span>, rendering you immune to control effects for 3.9 seconds. This poison will also break you free of ongoing control effects. (10 second cooldown)",
 		src: "/images/effects/Unstoppable.png",
 	},
 	{
@@ -326,9 +323,9 @@ const EffectsData = [
 		counterEffect: "Defile",
 		summary: "Increases healing taken",
 		potionEffect:
-			"Grants you <span class='text-amber-400'>Major Vitality</span>, increasing your healing taken by 16% for 15.7 seconds. (45 second cooldown)",
+			"Grants you <span class='text-amber-500'>Major Vitality</span>, increasing your healing taken by 16% for 15.7 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts <span class='text-purple-400'>Minor Defile</span> to your target and grants you <span class='text-amber-400'>Minor Vitality</span>, reducing their healing taken by 8% while increasing your healing taken by 8% for 3.9 seconds. (10 second cooldown)",
+			"Inflicts <span class='text-purple-400'>Minor Defile</span> to your target and grants you <span class='text-amber-500'>Minor Vitality</span>, reducing their healing taken by 8% while increasing your healing taken by 8% for 3.9 seconds. (10 second cooldown)",
 		src: "/images/effects/Vitality.png",
 	},
 	{
@@ -348,9 +345,9 @@ const EffectsData = [
 		counterEffect: "Enervation",
 		summary: "Alters weapon critical",
 		potionEffect:
-			"Grants you <span class='text-amber-400'>Major Savagery</span> which gives you 2629 Weapon Critical Rating for 47.6 seconds. (45 second cooldown)",
+			"Grants you <span class='text-amber-500'>Major Savagery</span> which gives you 2629 Weapon Critical Rating for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:
-			"Inflicts <span class='text-purple-400'>Minor Enervation</span> to your target and grants you <span class='text-amber-400'>Minor Savagery</span>, reducing their Critical Damage by 10% and increasing your Weapon Critical by 1314 for 5.5 seconds. (10 second cooldown)",
+			"Inflicts <span class='text-purple-400'>Minor Enervation</span> to your target and grants you <span class='text-amber-500'>Minor Savagery</span>, reducing their Critical Damage by 10% and increasing your Weapon Critical by 1314 for 5.5 seconds. (10 second cooldown)",
 		src: "/images/effects/Weapon_Critical.png",
 	},
 ];

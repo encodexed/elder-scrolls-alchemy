@@ -3,6 +3,7 @@ import SelectedIngredient from "./SelectedIngredient";
 import { useState, useEffect } from "react";
 import Results from "./Results";
 import EffectsData from "../../EffectsData";
+import CounterEffect from "./CounterEffect";
 
 function EmptySlot(id) {
 	this.id = id;
@@ -37,13 +38,13 @@ export default function SelectedIngredients(props) {
 				(item, index) => index === matches.indexOf(item)
 			);
 			// Determine if any effects counter the effect of the matches
-			let cancelledEffects = []
+			let cancelled = []
 			uniqueMatches.forEach((match) => {
 				EffectsData.forEach((effectData) => {
 					if (effectData.name === match) {
 						effects.forEach((effect) => {
 							if (effectData.counterEffect === effect) {
-								cancelledEffects.push({
+								cancelled.push({
 									effect: match,
 									counteredBy: effect
 								});
@@ -55,9 +56,9 @@ export default function SelectedIngredients(props) {
 
 			// Remove countered effects, and mark counters for state update
 			let newCounterEffects = [];
-			cancelledEffects.forEach((cancellation) => {
-				newCounterEffects.push(cancellation.counteredBy);
-				const index = uniqueMatches.indexOf(cancellation.effect);
+			cancelled.forEach((effect) => {
+				newCounterEffects.push(effect.counteredBy);
+				const index = uniqueMatches.indexOf(effect.effect);
 				uniqueMatches.splice(index, 1);
 			})
 
@@ -106,6 +107,7 @@ export default function SelectedIngredients(props) {
 					counterEffects={counterEffects}
 				/>
 			</div>
+			{counterEffects.length > 0 && <CounterEffect counterEffects={counterEffects} />}
 			<Results matches={matchedIngredients} />
 		</>
 	);
