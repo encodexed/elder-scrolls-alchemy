@@ -2,6 +2,7 @@ import IngredientsData from "../../IngredientsData";
 import SelectedIngredient from "./SelectedIngredient";
 import { useState, useEffect } from "react";
 import Results from "./Results";
+import EffectsData from "../../EffectsData";
 
 function EmptySlot(id) {
 	this.id = id;
@@ -15,6 +16,7 @@ function EmptySlot(id) {
 
 export default function SelectedIngredients(props) {
 	const [matchedIngredients, setMatchedIngredients] = useState([]);
+	const [counterEffects, setCounterEffects] = useState([]);
 
 	const ingredient1 =
 		IngredientsData[props.selectedIngredients[0]] || new EmptySlot("empty1");
@@ -34,9 +36,36 @@ export default function SelectedIngredients(props) {
 			const uniqueMatches = matches.filter(
 				(item, index) => index === matches.indexOf(item)
 			);
+			// Determine if any effects counter the effect of the matches
+			let cancelledEffects = []
+			uniqueMatches.forEach((match) => {
+				EffectsData.forEach((effectData) => {
+					if (effectData.name === match) {
+						effects.forEach((effect) => {
+							if (effectData.counterEffect === effect) {
+								cancelledEffects.push({
+									effect: match,
+									counteredBy: effect
+								});
+							}
+						});
+					}
+				});
+			});
+
+			// Remove countered effects, and mark counters for state update
+			let newCounterEffects = [];
+			cancelledEffects.forEach((cancellation) => {
+				newCounterEffects.push(cancellation.counteredBy);
+				const index = uniqueMatches.indexOf(cancellation.effect);
+				uniqueMatches.splice(index, 1);
+			})
+
+			setCounterEffects([...newCounterEffects]);
 			setMatchedIngredients([...uniqueMatches]);
 		} else {
 			setMatchedIngredients([]);
+			setCounterEffects([]);
 		}
 	}, [props.effects]);
 
@@ -60,18 +89,21 @@ export default function SelectedIngredients(props) {
 					matches={matchedIngredients}
 					ingredient={ingredient1}
 					deselectHandler={deselectHandler1}
+					counterEffects={counterEffects}
 				/>
 				<SelectedIngredient
 					key={"a" + ingredient2.id}
 					matches={matchedIngredients}
 					ingredient={ingredient2}
 					deselectHandler={deselectHandler2}
+					counterEffects={counterEffects}
 				/>
 				<SelectedIngredient
 					key={"a" + ingredient3.id}
 					matches={matchedIngredients}
 					ingredient={ingredient3}
 					deselectHandler={deselectHandler3}
+					counterEffects={counterEffects}
 				/>
 			</div>
 			<Results matches={matchedIngredients} />

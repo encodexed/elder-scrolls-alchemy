@@ -1,34 +1,46 @@
-import SectionHeader from "../UI/SectionHeader";
 import { useState } from "react";
+
+import SectionHeader from "../UI/SectionHeader";
+import EffectsData from "../../EffectsData";
+import Card from "../UI/Card";
 
 export default function Results(props) {
 	const [showPotions, setShowPotions] = useState(true);
 	const matches = props.matches.length > 0;
-	// console.log(props.matches);
+
+	let matchInfo = [];
+	props.matches.forEach((effect) => {
+		for (let i = 0; i < EffectsData.length; i++) {
+			if (EffectsData[i].name === effect) {
+				matchInfo.push(EffectsData[i]);
+			}
+		}
+	});
 
 	const displayMatch = () => {
 		return (
-			<>
-				<div className='flex text-center border'>
-					<div className='flex-1'>
-						<img
-							className='mx-auto'
-							src='/images/potions/Increase_Armor.png'
-							alt='A potion!'
-						/>
-						<p>Potion of Healing</p>
+			<div className='border'>
+				<Card>
+					<div className='flex flex-col text-center'>
+						<div className='flex-1'>
+							<img
+								className='mx-auto'
+								src='/images/potions/Increase_Armor.png'
+								alt='A potion!'
+							/>
+						</div>
+						<div className='flex flex-col flex-1 text-center'>
+							{matchInfo.map((effect) => {
+								return (
+									<div className='mt-3' key={"m" + effect.name}>
+										<p dangerouslySetInnerHTML={{__html: effect.potionEffect}} className='text-sm leading-none' />
+									</div>
+								);
+							})}
+						</div>
 					</div>
-					<div className='flex flex-col flex-1 text-center'>
-						{props.matches.map((match) => {
-							return (
-								<div key={"m" + match}>
-									<p>{match}</p>
-								</div>
-							);
-						})}
-					</div>
-				</div>
-			</>
+				</Card>
+			</div>
 		);
 	};
 

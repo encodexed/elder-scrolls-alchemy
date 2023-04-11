@@ -5,30 +5,50 @@ export default function SelectedIngredient(props) {
 		props.ingredient;
 	const unmatchedStyle = "text-slate-500";
 	const matchedStyle = "text-purple-500";
-	// const unshadowed = {};
-	const shadowStyle = { textShadow: "purple 0 0 0.5px" };
+	const counterEffectStyle = "text-red-500";
+	const matchedShadowStyle = { textShadow: "purple 0 0 0.5px" };
+	const counterEffectShadowStyle = { textShadow: "red 0 0 0.5px" };
 	let shadow1, shadow2, shadow3, shadow4;
 	let style1 = unmatchedStyle;
 	let style2 = unmatchedStyle;
 	let style3 = unmatchedStyle;
 	let style4 = unmatchedStyle;
 
+	// Display matching effects
 	if (props.matches.includes(effect1)) {
 		style1 = matchedStyle;
-		shadow1 = shadowStyle;
+		shadow1 = matchedShadowStyle;
 	}
 	if (props.matches.includes(effect2)) {
 		style2 = matchedStyle;
-		shadow2 = shadowStyle;
+		shadow2 = matchedShadowStyle;
 	}
 	if (props.matches.includes(effect3)) {
 		style3 = matchedStyle;
-		shadow3 = shadowStyle;
+		shadow3 = matchedShadowStyle;
 	}
 	if (props.matches.includes(effect4)) {
 		style4 = matchedStyle;
-		shadow4 = shadowStyle;
+		shadow4 = matchedShadowStyle;
 	}
+	// Change style for counter effects
+	if (props.counterEffects.includes(effect1)) {
+		style1 = counterEffectStyle;
+		shadow1 = counterEffectShadowStyle;
+	}
+	if (props.counterEffects.includes(effect2)) {
+		style2 = counterEffectStyle;
+		shadow2 = counterEffectShadowStyle;
+	}
+	if (props.counterEffects.includes(effect3)) {
+		style3 = counterEffectStyle;
+		shadow3 = counterEffectShadowStyle;
+	}
+	if (props.counterEffects.includes(effect4)) {
+		style4 = counterEffectStyle;
+		shadow4 = counterEffectShadowStyle;
+	}
+
 
 	return (
 		<div className='flex flex-col items-center flex-1'>
