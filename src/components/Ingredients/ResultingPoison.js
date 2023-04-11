@@ -5,11 +5,29 @@ export default function ResultingPoison(props) {
 		props.toggleView();
 	};
 
+	const determineName = () => {
+		let strength = [];
+		props.effectInfo.forEach((effect) => {
+			strength.push(effect.hierarchy);
+		});
+		const strongest = Math.min(...strength);
+
+		let poisonName = '';
+		props.effectInfo.forEach((effect) => {
+			if (effect.hierarchy === strongest.toString()) {
+				poisonName = effect.poisonName;
+			}
+		});
+
+		return poisonName;
+	};
+
+
    const resultTitle = () => {
 		return (
 			<>
-				<h2 className='text-lg'>Here is your expected poison</h2>
-				<p className='text-sm text-slate-500'>
+				<h2 className='text-2xl leading-none'>{determineName()}</h2>
+				<p className='text-sm leading-none text-slate-500'>
 					Show{" "}
 					<span
 						className='text-blue-500 underline cursor-pointer'

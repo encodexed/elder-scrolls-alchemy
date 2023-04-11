@@ -5,11 +5,28 @@ export default function ResultingPotion(props) {
 		props.toggleView();
 	};
 
+	const determineName = () => {
+		let strength = [];
+		props.effectInfo.forEach((effect) => {
+			strength.push(effect.hierarchy);
+		});
+		const strongest = Math.min(...strength);
+
+		let potionName = '';
+		props.effectInfo.forEach((effect) => {
+			if (effect.hierarchy === strongest.toString()) {
+				potionName = effect.potionName;
+			}
+		});
+
+		return potionName;
+	};
+
 	const resultTitle = () => {
 		return (
 			<>
-				<h2 className='text-lg'>Here is your expected potion</h2>
-				<p className='text-sm text-slate-500'>
+				<h2 className='text-2xl leading-none'>{determineName()}</h2>
+				<p className='text-sm leading-none text-slate-500'>
 					Show{" "}
 					<span
 						className='text-blue-500 underline cursor-pointer'
@@ -26,8 +43,8 @@ export default function ResultingPotion(props) {
 	return (
 		<div className='border'>
 			<Card>
-            <div className='flex flex-col text-center'>
-               {resultTitle()}
+				<div className='flex flex-col text-center'>
+					{resultTitle()}
 					<div>
 						<img
 							className='mx-auto'
