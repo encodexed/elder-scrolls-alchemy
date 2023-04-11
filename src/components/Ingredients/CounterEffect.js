@@ -8,8 +8,9 @@ export default function CounterEffect(props) {
          if (effect.counterEffect === counterEffect) {
             if (warning1 === '') {
                warning1 = `The ${effect.name} effect is being countered by the ${counterEffect} effect.`;
+            } else {
+               warning2 = `The ${effect.name} effect is being countered by the ${counterEffect} effect.`;
             }
-            warning2 = `The ${effect.name} effect is being countered by the ${counterEffect} effect.`;
          }
       })
    })
