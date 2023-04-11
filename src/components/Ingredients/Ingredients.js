@@ -1,8 +1,8 @@
 import Ingredient from "./Ingredient";
-import IngredientsData from "../IngredientsData";
+import IngredientsData from "../../IngredientsData";
 import SelectedIngredients from "./SelectedIngredients";
 import { useState } from "react";
-import SectionHeader from "./UI/SectionHeader";
+import SectionHeader from "../UI/SectionHeader";
 
 function getIncompability(effects) {
 	let incompatible = [];

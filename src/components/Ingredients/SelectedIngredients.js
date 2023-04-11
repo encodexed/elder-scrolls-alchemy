@@ -1,4 +1,4 @@
-import IngredientsData from "../IngredientsData";
+import IngredientsData from "../../IngredientsData";
 import SelectedIngredient from "./SelectedIngredient";
 import { useState, useEffect } from "react";
 import Results from "./Results";

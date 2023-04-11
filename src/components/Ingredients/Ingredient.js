@@ -1,10 +1,10 @@
 // import { useState } from "react";
 
-import AddButton from "./UI/AddButton";
-import RemoveButton from "./UI/RemoveButton";
-import Icon from "./UI/Icon";
-import IngredientsData from "../IngredientsData";
-import DisabledAddButton from "./UI/DisabledAddButton";
+import AddButton from "../UI/AddButton";
+import RemoveButton from "../UI/RemoveButton";
+import Icon from "../UI/Icon";
+import IngredientsData from "../../IngredientsData";
+import DisabledAddButton from "../UI/DisabledAddButton";
 
 export default function Ingredient(props) {
 	const ingredient = IngredientsData[props.id];

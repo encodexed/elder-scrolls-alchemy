@@ -1,4 +1,4 @@
-import RemoveButton from "./UI/RemoveButton";
+import RemoveButton from "../UI/RemoveButton";
 
 export default function SelectedIngredient(props) {
 	const { id, name, effect1, effect2, effect3, effect4, src } =

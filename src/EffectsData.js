@@ -345,7 +345,7 @@ const EffectsData = [
 		id: "131",
 		name: "Weapon Critical",
 		counterEffect: "Enervation",
-		summary: "Increases damage taken",
+		summary: "Alters weapon critical",
 		potionEffect:
 			"Grants you Major Savagery which gives you 2629 Weapon Critical Rating for 47.6 seconds. (45 second cooldown)",
 		poisonEffect:

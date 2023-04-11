@@ -1,6 +1,6 @@
-import EffectsData from "../EffectsData";
-import AddButton from "./UI/AddButton";
-import Icon from "./UI/Icon";
+import EffectsData from "../../EffectsData";
+import AddButton from "../UI/AddButton";
+import Icon from "../UI/Icon";
 
 export default function Effect(props) {
 

@@ -1,5 +1,5 @@
-import SectionHeader from "./UI/SectionHeader";
-import EffectsData from "../EffectsData";
+import SectionHeader from "../UI/SectionHeader";
+import EffectsData from "../../EffectsData";
 import Effect from "./Effect";
 
 export default function PotionEffects(props) {

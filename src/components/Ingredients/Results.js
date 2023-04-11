@@ -1,4 +1,4 @@
-import SectionHeader from "./UI/SectionHeader";
+import SectionHeader from "../UI/SectionHeader";
 import { useState } from "react";
 
 export default function Results(props) {

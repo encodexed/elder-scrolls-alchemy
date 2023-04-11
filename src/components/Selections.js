@@ -1,5 +1,5 @@
-import PotionEffects from "./PotionEffects";
-import Ingredients from "./Ingredients";
+import PotionEffects from './Effects/PotionEffects';
+import Ingredients from './Ingredients/Ingredients';
 
 export default function Selections(props) {
    return (
