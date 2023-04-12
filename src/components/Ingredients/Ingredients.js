@@ -41,7 +41,7 @@ export default function Ingredients(props) {
 			setIncompatibleIngredients(getIncompability(allEffects));
 		}
 
-		// Upon adding final ingredient choice...
+		// Upon adding final ingredient choice, disable the buttons.
 		if (selectedIngredients.length === 2) {
 			setDisableAddButtons(true);
 		}
@@ -64,7 +64,7 @@ export default function Ingredients(props) {
 		) {
 			const start = ingredientIndex * 4;
 			const updatedEffects = [...effects];
-			updatedEffects.splice(start, 4); // This method RETURNS the removed effects, can be problematic.
+			updatedEffects.splice(start, 4); // .splice() RETURNS the removed effects, can be problematic.
 			setEffects(updatedEffects);
 			setIncompatibleIngredients(getIncompability(updatedEffects));
 		}
@@ -75,6 +75,10 @@ export default function Ingredients(props) {
 		}
 	};
 
+	const showEffects = () => {
+		props.effectsClickHandler();
+	}
+
 	let displayIngredients = [];
 	IngredientsData.forEach((ingredient) => {
 		if (!incompatibleIngredients.includes(ingredient.id)) {
@@ -84,14 +88,8 @@ export default function Ingredients(props) {
 
 	return (
 		<div className='mt-6'>
-			<SelectedIngredients
-				selectedIngredients={selectedIngredients}
-				deselectIngredient={deselectIngredient}
-				effects={effects}
-			/>
-
-			<SectionHeader title={'Add Ingredients'} />
-			<div className='overflow-scroll border h-80'>
+			<SectionHeader title={'Add Ingredients'} link={showEffects} linkContent={'show effects instead'} />
+			<div className='h-48 overflow-scroll border'>
 				{displayIngredients.map((ingredient) => {
 					let isSelected = false;
 					if (selectedIngredients.includes(ingredient.id)) {
@@ -111,6 +109,11 @@ export default function Ingredients(props) {
 					);
 				})}
 			</div>
+			<SelectedIngredients
+				selectedIngredients={selectedIngredients}
+				deselectIngredient={deselectIngredient}
+				effects={effects}
+			/>
 		</div>
 	);
 }

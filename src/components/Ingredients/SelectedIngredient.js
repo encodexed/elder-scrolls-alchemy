@@ -1,11 +1,13 @@
 import RemoveButton from "../UI/RemoveButton";
+import Icon from "../UI/Icon";
+import DisabledRemoveButton from "../UI/DisabledRemoveButton";
 
 export default function SelectedIngredient(props) {
 	const { id, name, effect1, effect2, effect3, effect4, src } =
 		props.ingredient;
-	const unmatchedStyle = "text-slate-500";
-	const matchedStyle = "text-purple-500";
-	const counterEffectStyle = "text-red-500";
+	const unmatchedStyle = "text-sm leading-none text-center text-slate-500";
+	const matchedStyle = "text-sm leading-none text-center text-purple-500";
+	const counterEffectStyle = "text-sm leading-none text-center text-red-500";
 	const matchedShadowStyle = { textShadow: "purple 0 0 0.5px" };
 	const counterEffectShadowStyle = { textShadow: "red 0 0 0.5px" };
 	let shadow1, shadow2, shadow3, shadow4;
@@ -51,32 +53,28 @@ export default function SelectedIngredient(props) {
 
 
 	return (
-		<div className='flex flex-col items-center flex-1'>
-			<div className='w-20 h-20'>
-				<div className='absolute -translate-x-6'>
-					{id >= 0 && <RemoveButton onClick={props.deselectHandler} />}
-				</div>
-				<img className='w-full' src={src} alt={name} />
+		<div className='flex'>
+			<div>
+				<Icon src={src} />
 			</div>
-			<div className='text-center'>
-				<h4 className='underline text-md'>{name}</h4>
-				<p className='text-sm leading-none'>
-					<span className={style1} style={shadow1}>
-						{effect1}
-					</span>
-					<br />
-					<span className={style2} style={shadow2}>
-						{effect2}
-					</span>
-					<br />
-					<span className={style3} style={shadow3}>
-						{effect3}
-					</span>
-					<br />
-					<span className={style4} style={shadow4}>
-						{effect4}
-					</span>
-				</p>
+			<div className='flex-1 w-40 my-auto justify-content-center'>
+				<h3 className='text-center'>{name}</h3>
+			</div>
+			<div className='my-auto flex-0'>
+				{id >= 0 && (
+					<RemoveButton onClick={props.deselectHandler} />
+				)}
+				{id < 0 && (
+					<DisabledRemoveButton />
+				)}
+			</div>
+			<div className='flex-1 my-auto ml-2'>
+				<p className={style1} style={shadow1}>{effect1}</p>
+				<p className={style2} style={shadow2}>{effect2}</p>
+			</div>
+			<div className='flex-1 my-auto'>
+				<p className={style3} style={shadow3}>{effect3}</p>
+				<p className={style4} style={shadow4}>{effect4}</p>
 			</div>
 		</div>
 	);

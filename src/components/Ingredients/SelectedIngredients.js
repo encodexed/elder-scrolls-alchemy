@@ -64,25 +64,12 @@ export default function SelectedIngredients(props) {
 		}
 	}, [props.effects]);
 
-	if (props.selectedIngredients.length === 0) {
-		return (
-			<>
-				<SectionHeader title={"Expected Results"} />
-				<Results matches={matchedIngredients} />
-				<SectionHeader title={"Selections"} />
-				<div className='text-center border border-t-0'>
-					<p className='text-red-500'>No ingredients selected yet.</p>
-				</div>
-			</>
-		);
-	}
-
 	const ingredient1 =
-		IngredientsData[props.selectedIngredients[0]];
+		IngredientsData[props.selectedIngredients[0]] || new EmptySlot("-1");
 	const ingredient2 =
-		IngredientsData[props.selectedIngredients[1]] || new EmptySlot("empty2");
+		IngredientsData[props.selectedIngredients[1]] || new EmptySlot("-2");
 	const ingredient3 =
-		IngredientsData[props.selectedIngredients[2]] || new EmptySlot("empty3");
+		IngredientsData[props.selectedIngredients[2]] || new EmptySlot("-3");
 
 	const deselectHandler1 = () => {
 		props.deselectIngredient(ingredient1.id);
@@ -98,10 +85,8 @@ export default function SelectedIngredients(props) {
 
 	return (
 		<>
-			<SectionHeader title={"Expected Results"} />
-			<Results matches={matchedIngredients} />
 			<SectionHeader title={"Selections"} />
-			<div className='flex w-full py-2 space-x-3 border border-t-0'>
+			<div className='flex flex-col w-full border border-t-0'>
 				<SelectedIngredient
 					key={"a" + ingredient1.id}
 					matches={matchedIngredients}
@@ -127,6 +112,7 @@ export default function SelectedIngredients(props) {
 			{counterEffects.length > 0 && (
 				<CounterEffect counterEffects={counterEffects} />
 			)}
+			<Results matches={matchedIngredients} />
 		</>
 	);
 }

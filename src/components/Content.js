@@ -1,31 +1,38 @@
 import { useState } from "react";
 
 import Card from "./UI/Card";
-import Tabs from "./Tabs";
+// import Tabs from "./Tabs";
 import PotionEffects from "./Effects/PotionEffects";
 import Ingredients from "./Ingredients/Ingredients";
 
 export default function Content() {
-	const [viewingByPotions, setViewingByPotions] = useState(false);
+	const [selectionMode, setSelectionMode] = useState('ingredients');
 
 	const ingredientsClickHandler = () => {
-		setViewingByPotions(false);
+		setSelectionMode('ingredients');
 	};
 
-	const potionsClickHandler = () => {
-		setViewingByPotions(true);
+	const effectsClickHandler = () => {
+		setSelectionMode('effects');
 	};
 
 	return (
 		<div className='mx-auto grow'>
 			<Card>
-				<Tabs
-					viewingByPotions={viewingByPotions}
-					ingredientsClickHandler={ingredientsClickHandler}
-					potionsClickHandler={potionsClickHandler}
-				/>
-				{viewingByPotions && <PotionEffects />}
-				{!viewingByPotions && <Ingredients />}
+				{selectionMode === 'effects' && (
+					<PotionEffects
+						selectionMode={selectionMode}
+						ingredientsClickHandler={ingredientsClickHandler}
+						effectsClickHandler={effectsClickHandler}
+					/>
+				)}
+				{selectionMode === 'ingredients' && (
+					<Ingredients
+						selectionMode={selectionMode}
+						ingredientsClickHandler={ingredientsClickHandler}
+						effectsClickHandler={effectsClickHandler}
+					/>
+				)}
 			</Card>
 		</div>
 	);

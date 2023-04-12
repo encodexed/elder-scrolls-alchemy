@@ -6,7 +6,6 @@ import ResultingPoison from "./ResultingPoison";
 export default function Results(props) {
 	const [showPotions, setShowPotions] = useState(true);
 	const [effectInfo, setEffectInfo] = useState([]);
-	const matches = props.matches.length > 0;
 
 	useEffect(() => {
 		let matchInfo = [];
@@ -21,14 +20,6 @@ export default function Results(props) {
 		setEffectInfo([...matchInfo]);
 	}, [props.matches]);
 
-	const displayNoMatch = () => {
-		return (
-			<div className='flex text-center border'>
-				<p className='flex-1 text-red-500'>The chosen ingredients will not react.</p>
-			</div>
-		);
-	};
-
 	const toggleClickHandler = () => {
 		setShowPotions((prevState) => {
 			return !prevState;
@@ -37,19 +28,18 @@ export default function Results(props) {
 
 	return (
 		<>
-			{matches && showPotions && (
+			{showPotions && (
 				<ResultingPotion
 					effectInfo={effectInfo}
 					toggleView={toggleClickHandler}
 				/>
 			)}
-			{matches && !showPotions && (
+			{!showPotions && (
 				<ResultingPoison
 					effectInfo={effectInfo}
 					toggleView={toggleClickHandler}
 				/>
 			)}
-			{!matches && displayNoMatch()}
 		</>
 	);
 }
