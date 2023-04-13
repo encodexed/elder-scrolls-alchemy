@@ -2,14 +2,15 @@ import SectionHeader from "../UI/SectionHeader";
 import Card from "../UI/Card";
 import ConcoctionDescription from "../ConcoctionDescription";
 import EffectsData from "../../EffectsData";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import NoInput from "../NoInput";
 
 export default function EffectsResults(props) {
-   const [potionName, setPotionName] = useState('Unnamed potion');
-   const [poisonName, setPoisonName] = useState('Unnamed poison');
-   const [effects, setEffects] = useState([]); // for holding effect objects
+	const [potionName, setPotionName] = useState("Unnamed potion");
+	const [poisonName, setPoisonName] = useState("Unnamed poison");
+	const [effects, setEffects] = useState([]); // for holding effect objects
 
-   useEffect(() => {
+	useEffect(() => {
 		// Converting effects back into their objects. Was it necessary to split it in the first place? Will check later.
 		let effectInfo = [];
 		props.selectedEffectsIDs.forEach((effect) => {
@@ -18,8 +19,8 @@ export default function EffectsResults(props) {
 					effectInfo.push(EffectsData[i]);
 				}
 			}
-      });
-      setEffects(effectInfo);
+		});
+		setEffects(effectInfo);
 
 		// Determining the names based on hierarchical data for the concoctions.
 		let strength = [];
@@ -35,10 +36,19 @@ export default function EffectsResults(props) {
 		});
 	}, [props.selectedEffectsIDs]);
 
-   return (
-      <>
+	if (props.selectedEffectsIDs.length === 0) {
+		return (
+			<>
+				<SectionHeader title='Need Help?' />
+				<NoInput />
+			</>
+		);
+	}
+
+	return (
+		<>
 			<SectionHeader title='Results' />
-         <div className='border'>
+			<div className='border'>
 				<div className='flex'>
 					<Card>
 						<div className='flex flex-col text-center'>
@@ -90,5 +100,5 @@ export default function EffectsResults(props) {
 				</div>
 			</div>
 		</>
-   )
+	);
 }
