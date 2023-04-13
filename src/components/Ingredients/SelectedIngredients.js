@@ -1,7 +1,7 @@
 import IngredientsData from "../../IngredientsData";
 import SelectedIngredient from "./SelectedIngredient";
 import { useState, useEffect } from "react";
-import Results from "./Results";
+import IngredientResults from "./IngredientResults";
 import EffectsData from "../../EffectsData";
 import SectionHeader from "../UI/SectionHeader";
 
@@ -16,7 +16,7 @@ function EmptySlot(id) {
 }
 
 export default function SelectedIngredients(props) {
-	const [matchedIngredients, setMatchedIngredients] = useState([]);
+	const [matchedEffects, setMatchedEffects] = useState([]);
 	const [counterEffects, setCounterEffects] = useState([]);
 
 	useEffect(() => {
@@ -56,9 +56,9 @@ export default function SelectedIngredients(props) {
 			});
 
 			setCounterEffects([...newCounterEffects]);
-			setMatchedIngredients([...uniqueMatches]);
+			setMatchedEffects([...uniqueMatches]);
 		} else {
-			setMatchedIngredients([]);
+			setMatchedEffects([]);
 			setCounterEffects([]);
 		}
 	}, [props.effects]);
@@ -88,28 +88,28 @@ export default function SelectedIngredients(props) {
 			<div className='flex flex-col w-full border border-t-0'>
 				<SelectedIngredient
 					key={"a" + ingredient1.id}
-					matchedEffects={matchedIngredients}
+					matchedEffects={matchedEffects}
 					ingredient={ingredient1}
 					deselectHandler={deselectHandler1}
 					counterEffects={counterEffects}
 				/>
 				<SelectedIngredient
 					key={"a" + ingredient2.id}
-					matchedEffects={matchedIngredients}
+					matchedEffects={matchedEffects}
 					ingredient={ingredient2}
 					deselectHandler={deselectHandler2}
 					counterEffects={counterEffects}
 				/>
 				<SelectedIngredient
 					key={"a" + ingredient3.id}
-					matchedEffects={matchedIngredients}
+					matchedEffects={matchedEffects}
 					ingredient={ingredient3}
 					deselectHandler={deselectHandler3}
 					counterEffects={counterEffects}
 				/>
 			</div>
-			<Results
-				matchedEffects={matchedIngredients}
+			<IngredientResults
+				matchedEffects={matchedEffects}
 				counterEffects={counterEffects}
 				selectedCount={props.effects.length}
 			/>

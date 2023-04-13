@@ -87,7 +87,7 @@ export default function Ingredients(props) {
 	});
 
 	return (
-		<div className='mt-6'>
+		<>
 			<SectionHeader title={'Add Ingredients'} link={showEffects} linkContent={'show effects instead'} />
 			<div className='h-48 overflow-scroll border'>
 				{displayIngredients.map((ingredient) => {
@@ -114,6 +114,6 @@ export default function Ingredients(props) {
 				deselectIngredient={deselectIngredient}
 				effects={effects}
 			/>
-		</div>
+		</>
 	);
 }

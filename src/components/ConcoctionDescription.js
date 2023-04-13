@@ -1,5 +1,5 @@
 export default function ConcoctionDescription(props) {
-	if (props.conctionType === 'potion') {
+	if (props.concoctionType === 'potion') {
 		return (
 			<div className='mt-3'>
 				<p

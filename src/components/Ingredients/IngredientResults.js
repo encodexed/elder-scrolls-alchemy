@@ -7,9 +7,10 @@ import EffectsData from "../../EffectsData";
 import NoMatches from "../NoMatches";
 import CounterEffect from "./CounterEffect";
 
-export default function Results(props) {
+export default function IngredientResults(props) {
 	const [potionName, setPotionName] = useState("Unnamed Potion");
 	const [poisonName, setPoisonName] = useState("Unnamed Poison");
+	const [effects, setEffects] = useState([]); // for holding effect objects
 
 	useEffect(() => {
 		// Converting effects back into their objects. Was it necessary to split it in the first place? Will check later.
@@ -21,6 +22,7 @@ export default function Results(props) {
 				}
 			}
 		});
+		setEffects(effectInfo);
 
 		// Determining the names based on hierarchical data for the concoctions.
 		let strength = [];
@@ -79,7 +81,7 @@ export default function Results(props) {
 								/>
 							</div>
 							<div className='flex flex-col text-center'>
-								{props.matchedEffects.map((effect) => {
+								{effects.map((effect) => {
 									return (
 										<ConcoctionDescription
 											key={"potion" + effect.name}
@@ -103,7 +105,7 @@ export default function Results(props) {
 								/>
 							</div>
 							<div className='flex flex-col text-center'>
-								{props.matchedEffects.map((effect) => {
+								{effects.map((effect) => {
 									return (
 										<ConcoctionDescription
 											key={"poison" + effect.name}

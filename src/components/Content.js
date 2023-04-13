@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import Card from "./UI/Card";
-// import Tabs from "./Tabs";
 import PotionEffects from "./Effects/PotionEffects";
 import Ingredients from "./Ingredients/Ingredients";
 
