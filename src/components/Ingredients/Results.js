@@ -37,7 +37,7 @@ export default function Results(props) {
 	}, [props.matchedEffects]);
 
 	if (props.matchedEffects.length === 0) {
-		if (props.selectedCount > 0) {
+		if (props.selectedCount > 4) {
 			return (
 				<>
 					<SectionHeader title='Results' />
