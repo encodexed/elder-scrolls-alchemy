@@ -3,7 +3,6 @@ import SelectedIngredient from "./SelectedIngredient";
 import { useState, useEffect } from "react";
 import Results from "./Results";
 import EffectsData from "../../EffectsData";
-import CounterEffect from "./CounterEffect";
 import SectionHeader from "../UI/SectionHeader";
 
 function EmptySlot(id) {
@@ -13,7 +12,7 @@ function EmptySlot(id) {
 	this.effect2 = "-";
 	this.effect3 = "-";
 	this.effect4 = "-";
-	this.src = "/images/ingredients/Empty.png";
+	this.src = "/images/Empty.png";
 }
 
 export default function SelectedIngredients(props) {
@@ -89,30 +88,31 @@ export default function SelectedIngredients(props) {
 			<div className='flex flex-col w-full border border-t-0'>
 				<SelectedIngredient
 					key={"a" + ingredient1.id}
-					matches={matchedIngredients}
+					matchedEffects={matchedIngredients}
 					ingredient={ingredient1}
 					deselectHandler={deselectHandler1}
 					counterEffects={counterEffects}
 				/>
 				<SelectedIngredient
 					key={"a" + ingredient2.id}
-					matches={matchedIngredients}
+					matchedEffects={matchedIngredients}
 					ingredient={ingredient2}
 					deselectHandler={deselectHandler2}
 					counterEffects={counterEffects}
 				/>
 				<SelectedIngredient
 					key={"a" + ingredient3.id}
-					matches={matchedIngredients}
+					matchedEffects={matchedIngredients}
 					ingredient={ingredient3}
 					deselectHandler={deselectHandler3}
 					counterEffects={counterEffects}
 				/>
 			</div>
-			{counterEffects.length > 0 && (
-				<CounterEffect counterEffects={counterEffects} />
-			)}
-			<Results matches={matchedIngredients} />
+			<Results
+				matchedEffects={matchedIngredients}
+				counterEffects={counterEffects}
+				selectedCount={props.effects.length}
+			/>
 		</>
 	);
 }

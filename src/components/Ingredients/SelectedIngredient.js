@@ -17,19 +17,19 @@ export default function SelectedIngredient(props) {
 	let style4 = unmatchedStyle;
 
 	// Display matching effects
-	if (props.matches.includes(effect1)) {
+	if (props.matchedEffects.includes(effect1)) {
 		style1 = matchedStyle;
 		shadow1 = matchedShadowStyle;
 	}
-	if (props.matches.includes(effect2)) {
+	if (props.matchedEffects.includes(effect2)) {
 		style2 = matchedStyle;
 		shadow2 = matchedShadowStyle;
 	}
-	if (props.matches.includes(effect3)) {
+	if (props.matchedEffects.includes(effect3)) {
 		style3 = matchedStyle;
 		shadow3 = matchedShadowStyle;
 	}
-	if (props.matches.includes(effect4)) {
+	if (props.matchedEffects.includes(effect4)) {
 		style4 = matchedStyle;
 		shadow4 = matchedShadowStyle;
 	}
