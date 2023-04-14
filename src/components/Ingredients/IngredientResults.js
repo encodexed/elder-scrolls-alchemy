@@ -1,5 +1,5 @@
 import NoInput from "../NoInput";
-import Card from "../UI/Card";
+import ConcoctionCard from "../UI/ConcoctionCard";
 import SectionHeader from "../UI/SectionHeader";
 import ConcoctionDescription from "../ConcoctionDescription";
 import { useState, useEffect } from "react";
@@ -40,6 +40,17 @@ export default function IngredientResults(props) {
 
 	if (props.matchedEffects.length === 0) {
 		if (props.selectedCount > 4) {
+			if (props.counterEffects.length > 0) {
+				return (
+					<>
+						<SectionHeader title='Results' />
+						<NoMatches
+							conflicts={true}
+							counterEffects={props.counterEffects}
+						/>
+					</>
+				);
+			}
 			return (
 				<>
 					<SectionHeader title='Results' />
@@ -51,7 +62,10 @@ export default function IngredientResults(props) {
 			return (
 				<>
 					<SectionHeader title='Results' />
-					<NoMatches conflicts={true} counterEffects={props.counterEffects} />
+					<NoMatches
+						conflicts={true}
+						counterEffects={props.counterEffects}
+					/>
 				</>
 			);
 		} else {
@@ -70,53 +84,57 @@ export default function IngredientResults(props) {
 			<div className='border'>
 				<CounterEffect counterEffects={props.counterEffects} />
 				<div className='flex'>
-					<Card>
-						<div className='flex flex-col text-center'>
-							<h2 className='text-2xl leading-none'>{potionName}</h2>
-							<div>
-								<img
-									className='mx-auto'
-									src='/images/potions/Increase_Armor.png'
-									alt='A potion!'
-								/>
-							</div>
+					<div className='flex-1'>
+						<ConcoctionCard>
 							<div className='flex flex-col text-center'>
-								{effects.map((effect) => {
-									return (
-										<ConcoctionDescription
-											key={"potion" + effect.name}
-											concoctionType='potion'
-											effect={effect}
-										/>
-									);
-								})}
+								<h2 className='text-xl leading-none'>{potionName}</h2>
+								<div>
+									<img
+										className='mx-auto'
+										src='/images/potions/Increase_Armor.png'
+										alt='A potion!'
+									/>
+								</div>
+								<div className='flex flex-col text-center'>
+									{effects.map((effect) => {
+										return (
+											<ConcoctionDescription
+												key={"potion" + effect.name}
+												concoctionType='potion'
+												effect={effect}
+											/>
+										);
+									})}
+								</div>
 							</div>
-						</div>
-					</Card>
+						</ConcoctionCard>
+					</div>
 					<div className='flex-shrink my-auto'>OR</div>
-					<Card>
-						<div className='flex flex-col text-center'>
-							<h2 className='text-2xl leading-none'>{poisonName}</h2>
-							<div>
-								<img
-									className='mx-auto'
-									src='/images/poisons/Red_Poison.png'
-									alt='A poison!'
-								/>
-							</div>
+					<div className='flex-1'>
+						<ConcoctionCard>
 							<div className='flex flex-col text-center'>
-								{effects.map((effect) => {
-									return (
-										<ConcoctionDescription
-											key={"poison" + effect.name}
-											concoctionType='poison'
-											effect={effect}
-										/>
-									);
-								})}
+								<h2 className='text-xl leading-none'>{poisonName}</h2>
+								<div>
+									<img
+										className='mx-auto'
+										src='/images/poisons/Red_Poison.png'
+										alt='A poison!'
+									/>
+								</div>
+								<div className='flex flex-col text-center'>
+									{effects.map((effect) => {
+										return (
+											<ConcoctionDescription
+												key={"poison" + effect.name}
+												concoctionType='poison'
+												effect={effect}
+											/>
+										);
+									})}
+								</div>
 							</div>
-						</div>
-					</Card>
+						</ConcoctionCard>
+					</div>
 				</div>
 			</div>
 		</>
