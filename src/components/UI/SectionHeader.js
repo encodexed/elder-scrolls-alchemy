@@ -1,6 +1,6 @@
 export default function SectionHeader(props) {
 	return (
-		<div className='flex px-2 mt-2 text-white bg-blue-500'>
+		<div className='flex px-2 mt-2 text-white bg-indigo-800'>
 			<div className='flex-grow my-auto text-left'>
             <h2 className='text-lg text-semibold'>{props.title}</h2>
             
