@@ -9,15 +9,15 @@ export default function Effect(props) {
 	const { id, name, src, summary } = effect;
 
 	const selectEffect = () => {
-		props.selectEffect(id)
-	}
+		props.selectEffect(id);
+	};
 
 	const deselectEffect = () => {
-		props.deselectEffect(id)
-	}
-   
-   return (
-      <div className='flex my-2'>
+		props.deselectEffect(id);
+	};
+
+	return (
+		<div className='flex my-2'>
 			<div>
 				<Icon src={src} />
 			</div>
@@ -26,12 +26,16 @@ export default function Effect(props) {
 			</div>
 			<div className='my-auto flex-0'>
 				{props.isSelected && <RemoveButton onClick={deselectEffect} />}
-				{!props.isSelected && !props.isDisabled &&  <AddButton onClick={selectEffect} />}
+				{!props.isSelected && !props.isDisabled && (
+					<AddButton onClick={selectEffect} />
+				)}
 				{!props.isSelected && props.isDisabled && <DisabledAddButton />}
 			</div>
 			<div className='flex-1 my-auto ml-2'>
-            <p className='text-sm leading-none text-center text-slate-500'>{summary}</p>
+				<p className='text-sm leading-none text-center text-slate-500'>
+					{summary}
+				</p>
 			</div>
 		</div>
-   )
+	);
 }
