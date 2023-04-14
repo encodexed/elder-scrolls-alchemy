@@ -5,7 +5,7 @@ import PotionEffects from "./Effects/PotionEffects";
 import Ingredients from "./Ingredients/Ingredients";
 
 export default function Content() {
-	const [selectionMode, setSelectionMode] = useState('ingredients');
+	const [selectionMode, setSelectionMode] = useState('effects'); // Set to effects so refreshing goes straight to effects during dev
 
 	const ingredientsClickHandler = () => {
 		setSelectionMode('ingredients');

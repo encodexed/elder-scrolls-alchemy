@@ -3,30 +3,29 @@ import EffectsData from "../../EffectsData";
 import Effect from "./Effect";
 import { useState } from "react";
 import EffectsResults from "./EffectsResults";
+import Combinations from "./Combinations";
 
 export default function PotionEffects(props) {
-	const [selectedEffects, setSelectedEffects] = useState([]);
+	const [selectedEffectsIDs, setSelectedEffectsIDs] = useState([]);
 	const [disableAddButtons, setDisableAddButtons] = useState(false);
 
 	const selectEffect = (id) => {
-		if (selectedEffects.length < 3) {
-			setSelectedEffects([...selectedEffects, id]);
+		if (selectedEffectsIDs.length < 3) {
+			setSelectedEffectsIDs([...selectedEffectsIDs, id]);
 		}
 
-		if (selectedEffects.length === 2) {
+		if (selectedEffectsIDs.length === 2) {
 			setDisableAddButtons(true);
 		}
 	};
 
 	const deselectEffect = (id) => {
-		setSelectedEffects(
-			selectedEffects.filter((effectID) => id !== effectID)
-		);
-		
-		if (selectedEffects.length === 3) {
+		setSelectedEffectsIDs(selectedEffectsIDs.filter((effectID) => id !== effectID));
+
+		if (selectedEffectsIDs.length === 3) {
 			setDisableAddButtons(false);
 		}
-	}
+	};
 
 	return (
 		<>
@@ -38,7 +37,7 @@ export default function PotionEffects(props) {
 			<div className='h-48 overflow-scroll border'>
 				{EffectsData.map((effect) => {
 					let isSelected = false;
-					if (selectedEffects.includes(effect.id)) {
+					if (selectedEffectsIDs.includes(effect.id)) {
 						isSelected = true;
 					}
 					return (
@@ -53,7 +52,8 @@ export default function PotionEffects(props) {
 					);
 				})}
 			</div>
-			<EffectsResults selectedEffectsIDs={selectedEffects} />
+			<Combinations selectedEffectsIDs={selectedEffectsIDs} />
+			<EffectsResults selectedEffectsIDs={selectedEffectsIDs} />
 		</>
 	);
 }
