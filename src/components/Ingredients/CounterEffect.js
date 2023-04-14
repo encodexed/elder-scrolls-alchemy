@@ -5,9 +5,10 @@ export default function CounterEffect(props) {
 	props.counterEffects.forEach((counterEffect) => {
 		EffectsData.forEach((effect) => {
 			if (effect.counterEffect === counterEffect) {
-				problems.push(
-					`The ${effect.name} effect is being countered by the ${counterEffect} effect.`
-				);
+				problems.push({
+					id: "s" + counterEffect,
+					description: `The ${effect.name} effect is being countered by the ${counterEffect} effect.`
+				});
 			}
 		});
 	});
@@ -15,7 +16,7 @@ export default function CounterEffect(props) {
 	return (
 		<div className='mt-2 text-sm text-center text-red-500' style={{ textShadow: "red 0 0 0.5px" }}>
 			{problems.map((problem) => {
-				return <p>{problem}</p>;
+				return <p key={problem.id}>{problem.description}</p>;
 			})}
 		</div>
 	);
