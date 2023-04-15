@@ -17,7 +17,7 @@ export default function Effect(props) {
 	};
 
 	return (
-		<div className='flex my-2'>
+		<div className='flex'>
 			<div>
 				<Icon src={src} />
 			</div>
