@@ -151,7 +151,11 @@ export default function Combinations(props) {
 									for (let i = 0; i < allEffects.length - 1; i++) {
 										// Find matches
 										if (allEffects[i] === allEffects[i + 1]) {
-											if (!selectedEffectsNames.includes(allEffects[i])) {
+											if (
+												!selectedEffectsNames.includes(
+													allEffects[i]
+												)
+											) {
 												sideEffect = true;
 											}
 										}
@@ -168,7 +172,9 @@ export default function Combinations(props) {
 						});
 					});
 				}
-
+				if (combinations.length === 0) {
+					isPossible = false;
+				}
 				setPossibleCombinations([...combinations]);
 			}
 
@@ -490,7 +496,7 @@ export default function Combinations(props) {
 		);
 	}
 
-	if (isImpossible) {
+	if (isImpossible && strictMode) {
 		return (
 			<>
 				<SectionHeader
@@ -501,7 +507,33 @@ export default function Combinations(props) {
 				<div className='flex flex-col h-48 text-center border'>
 					<p className='px-4 my-auto'>
 						Unfortunately, this combination of effects does not exist in
-						ESO.
+						ESO. Consider{" "}
+						<span
+							className='text-indigo-800 underline cursor-pointer'
+							onClick={disableStrictMode}
+						>
+							disabling strict mode
+						</span>
+						. This will allow the assistant to show you potions that may
+						contain side effects.
+					</p>
+				</div>
+			</>
+		);
+	}
+
+	if (isImpossible && !strictMode) {
+		return (
+			<>
+				<SectionHeader
+					title={"Possible Combinations"}
+					link={toggleStrictMode}
+					linkContent={strictSetting}
+				/>
+				<div className='flex flex-col h-48 text-center border'>
+					<p className='px-4 my-auto'>
+						Unfortunately, this combination of effects does not exist in
+						ESO, even with potential side effects considered.
 					</p>
 				</div>
 			</>
