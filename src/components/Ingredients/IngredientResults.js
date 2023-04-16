@@ -43,7 +43,7 @@ export default function IngredientResults(props) {
 			if (props.counterEffects.length > 0) {
 				return (
 					<>
-						<SectionHeader title='Results' />
+						<SectionHeader title='Results' linkContent='(CP 150)'/>
 						<NoMatches
 							conflicts={true}
 							counterEffects={props.counterEffects}
@@ -53,7 +53,7 @@ export default function IngredientResults(props) {
 			}
 			return (
 				<>
-					<SectionHeader title='Results' />
+					<SectionHeader title='Results' linkContent='(CP 150)'/>
 					<NoMatches conflicts={false} />
 				</>
 			);
@@ -61,7 +61,7 @@ export default function IngredientResults(props) {
 		if (props.counterEffects.length > 0) {
 			return (
 				<>
-					<SectionHeader title='Results' />
+					<SectionHeader title='Results' linkContent='(CP 150)'/>
 					<NoMatches
 						conflicts={true}
 						counterEffects={props.counterEffects}
@@ -80,7 +80,7 @@ export default function IngredientResults(props) {
 
 	return (
 		<>
-			<SectionHeader title='Results' />
+			<SectionHeader title='Results' linkContent='(CP 150)' />
 			<div className='border'>
 				<CounterEffect counterEffects={props.counterEffects} />
 				<div className='flex'>

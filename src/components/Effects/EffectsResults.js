@@ -47,7 +47,7 @@ export default function EffectsResults(props) {
 
 	return (
 		<>
-			<SectionHeader title='Results' />
+			<SectionHeader title='Results' linkContent='(CP 150)' />
 			<div className='border'>
 				<div className='flex'>
 					<div className='flex-1'>
