@@ -4,7 +4,7 @@
 
 ## Demo & Snippets
 
-Images go here.
+![ESOAv1](https://github.com/encodexed/elder-scrolls-alchemy/assets/107448691/5bfa2c40-0aaa-49b9-bfd7-ea2df9967a47)
 
 Full size images:
 
