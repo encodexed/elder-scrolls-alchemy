@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Elder Scrolls Online Alchemy Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Please Note: This project is slated for a rewrite with more professional design patterns, styling, coding practices and use of technology like TypeScript and React's useContext hook**
 
-## Available Scripts
+## Demo & Snippets
 
-In the project directory, you can run:
+Images go here.
 
-### `npm start`
+Full size images:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Ingredients Page](https://res.cloudinary.com/dihtw7wct/image/upload/v1699920664/Screenshot_2023-11-14_at_11.04.10_am_rpy9yr.png)
+- [Effects Page](https://res.cloudinary.com/dihtw7wct/image/upload/v1699920711/Screenshot_2023-11-14_at_11.04.28_am_qpkeo1.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Requirements / Purpose
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Elder Scrolls Online (ESO) Alchemy Assistant app is a tool for people who play ESO. It aims to emulate the alchemy crafting system present in the game but as a calculator to help players craft potions. In the game, the mechanics and the UI can often be confusing, and depending on the player's progress in the game, ingredients may not display their full range of effects and capabilities. This app then demystifies the process and helps players explore and experiment with different combinations of ingredients and effects.
 
-### `npm run build`
+Players who play ESO on PC will have access to mods that modify the game to help them achieve the same help in game, but players trying to keep their game "vanilla" or players on consoles like Xbox and Playstation will not have access to such help. This tool is therefore targetted at those players.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Tech Stack:** HTML, TailwindCSS, JavaScript, React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Build Steps
 
-### `npm run eject`
+To run this project in your local repository, paste the following code in your terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone git@github.com:encodexed/elder-scrolls-alchemy.git
+cd elder-scrolls-alchemy
+npm install
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Design Goals / Approach
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- As my primary audience was console players, this app was designed with mobile in mind. I tried to write it in a certain way that no scrolling on the body was necessary, but on some screen sizes there is a little bit.
+- This was my first ever React project and it has been written in a bit of a messy way, but it was a labour of love for me as I was learning to code. The project will be rewritten with better and cleaner practices and that will likely come to fruition before the end of November, 2023.
+- I chose to write this project with TailwindCSS as a learning process as well as a learning process for React.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project's key features include:
 
-### Code Splitting
+- Components that map out data about Ingredients and Effects into a selectable list
+- Live visual feedback in the form of text highlighting to help players craft potions efficiently
+- Behind-the-scenes calculations that power the calculator to show players combinations and results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Known issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- This repository is not necessarily up to date with the version on the [hosted site](https://alakaslam.io/alchemy_assistant).
+- `useContext` or similar state management tools are not utilised and there is a lot of prop drilling/state lifting that clutter the code
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Goals
 
-### Advanced Configuration
+- This project will be rewritten with better practices and technology
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Licensing Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Copyright 2023 Robert Gollan
 
-### `npm run build` fails to minify
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without limitation in the rights to use, copy, modify, merge, publish, and/ or distribute copies of the Software in an educational or personal context, subject to the following conditions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Permission is granted to sell and/ or distribute copies of the Software in a commercial context, subject to the following conditions:
+
+Substantial changes: adding, removing, or modifying large parts, shall be developed in the Software. Reorganizing logic in the software does not warrant a substantial change.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+## Further details, related projects, reimplementations
+
+- Watch this space.
